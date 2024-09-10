@@ -6,7 +6,7 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 13:50:51 by brandebr          #+#    #+#              #
-#    Updated: 2024/09/06 14:02:44 by brandebr         ###   ########.fr        #
+#    Updated: 2024/09/10 10:49:55 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 valgrind: $(NAME)
-	@valgrind --leak-check=full --track-origins=yes ./$(NAME)
+	@valgrind --leak-check=full --track-origins=yes ./$(NAME)  13 Boo
 
 exit: $(NAME)
 	@leaks --atExit -- ./ManyBraiiiiiiinnnzzzZ 3 Boo

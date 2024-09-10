@@ -6,12 +6,13 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 13:51:15 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/06 18:00:22 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/10 10:34:41 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <iostream>
+#include <stdlib.h>
 #include "Zombie.hpp"
 
 int	main(int argc, char **argv) {
