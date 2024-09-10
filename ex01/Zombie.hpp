@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 13:51:47 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/06 17:52:25 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/10 11:32:17 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,16 @@ class Zombie {
 	public:
 		Zombie();
 		Zombie(std::string name);
-	//	Zombie(const Zombie& other);//copy constructor
-	//	Zombie& operator=(Zombie& other);// copy assignement operator??
 		~Zombie();
 
 		void announce( void );
 
 		std::string getName() const;
-
+		void 		setName(std::string name);
 	private:
 		std::string name;
 };
 
-//Zombie* newZombie(std::string name);
 Zombie* zombieHorde( int N, std::string name );
 
 #endif
