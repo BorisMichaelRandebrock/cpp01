@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 13:52:00 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/10 11:32:14 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/10 12:57:13 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ Zombie::~Zombie() {
 
 void Zombie::announce() {
 	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-	
 }
 
 std::string Zombie::getName() const {
