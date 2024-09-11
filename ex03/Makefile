@@ -13,7 +13,7 @@
 
 NAME = unnecessary_violence
 
-SRC = main.cpp Weapon.cpp
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJ_DIR = obj/
 
