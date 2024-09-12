@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 14:09:31 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/12 17:12:01 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 17:35:53 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void replaceString(std::string &buffer, const std::string &search, const std::st
 int main(int argc, char **argv) {
 	if (argc != 4) {
 		std::cerr << "Wrong number of arguments" << std::endl 
-			<< "Please enter <filename>, <search> & <replace>" << std::endl;
+			<< "Please enter: ./sedIsForLoosers,  <filename>, <search> & <replace>" << std::endl;
 		return 1;
 	}
 	std::string buffer;
@@ -63,11 +63,11 @@ int main(int argc, char **argv) {
     }
     outputFile << buffer;
     outputFile.close();
+
+	return 0;
+}
 	/*
 	std::istringstream iss(buffer);
 	while (getline(iss, line)) {
 		std::cout << line << std::endl;
 	}*/
-
-	return 0;
-}
