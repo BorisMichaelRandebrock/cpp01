@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:52:52 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/12 11:59:19 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 12:24:42 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,9 @@ int main(void) {
 	std::cout << BLUE << "...representation of an ancient habbit of the human beings:.." << std::endl;
 	sleep(5);
 	std::cout << "\033[2J\033[H" << std::endl;
-	//sleep(5);
 	std::cout << YELLOW << "Showcasting just:" << std::endl;
 	sleep(5);
 	std::cout << "\033[2J\033[H" << std::endl;
-//	sleep(5);
 	std::cout << RED_BACKGROUND <<  "Too much, and unneccesary violence... " << RESET << std::endl;
 	sleep(5);  
 	std::cout << "\033[2J\033[H" << std::endl;
