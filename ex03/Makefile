@@ -6,7 +6,7 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/10 17:51:55 by brandebr          #+#    #+#              #
-#    Updated: 2024/09/12 12:06:23 by brandebr         ###   ########.fr        #
+#    Updated: 2024/09/12 14:50:48 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 
 CC = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98 -g -c  
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g 
 
 all: Makefile $(NAME)
 
@@ -30,7 +30,7 @@ $(OBJ_DIR)%.o: %.cpp Makefile
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 valgrind: $(NAME)
 	@valgrind --leak-check=full --track-origins=yes ./$(NAME)

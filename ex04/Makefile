@@ -5,36 +5,34 @@
 #                                                     +:+ +:+         +:+      #
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/06 13:50:51 by brandebr          #+#    #+#              #
-#    Updated: 2024/09/12 14:52:14 by brandebr         ###   ########.fr        #
+#    Created: 2024/09/12 13:57:45 by brandebr          #+#    #+#              #
+#    Updated: 2024/09/12 17:24:07 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ManyBraiiiiiiinnnzzzZ
+NAME = sedIsForLoosers
 
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
+SRC = main.cpp
+
 OBJ_DIR = obj/
+
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 
 CC = c++
+
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-all: $(NAME)
+all: Makefile $(NAME)
 
-# Compile .o files from .cpp files, ensuring the directory exists
 $(OBJ_DIR)%.o: %.cpp Makefile
-	@mkdir -p $(OBJ_DIR)
+	mkdir -p $(OBJ_DIR)
 	$(CC) $(FLAGS) -c $< -o $@
 
-# Link the .o files into the final executable
 $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 valgrind: $(NAME)
-	@valgrind --leak-check=full --track-origins=yes ./$(NAME)  13 Boo
-
-exit: $(NAME)
-	@leaks --atExit -- ./ManyBraiiiiiiinnnzzzZ 3 Boo
+	@valgrind --leak-check=full --track-origins=yes ./$(NAME)
 
 clean:
 	/bin/rm -f $(OBJ)
@@ -42,8 +40,7 @@ clean:
 fclean: clean
 	/bin/rm -rf $(OBJ_DIR)
 	/bin/rm -f $(NAME)
-
+	
 re: fclean all
 
 .PHONY: all clean fclean re
-
