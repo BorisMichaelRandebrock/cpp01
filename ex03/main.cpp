@@ -6,36 +6,56 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:52:52 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/10 17:52:57 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 11:59:19 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <iostream>
+#include <unistd.h>
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
+#include "colors.hpp"
+
+
 
 int main(void) {
 
-	std::cout << "The following is a very sad," << std::endl;
-	std::cout << "indeed very,  very sad" << std::endl;
-	std::cout << "representation of an ancient habbit of humans.." << std::endl;
-	std::cout << "Showcasting just:" << std::endl;
-	std::cout << "Too much, and unneccesary violence... " << std::endl;
+	std::cout << "\033[2J\033[H" << std::endl;
+	std::cout << YELLOW << "The following is a very sad,...." << std::endl;
+	sleep(5);
+	std::cout << "\033[2J\033[H" << std::endl;
+	std::cout << "... indeed very, very sad..." << std::endl;
+	sleep(5);
+	std::cout << "\033[2J\033[H" << std::endl;
+	std::cout << BLUE << "...representation of an ancient habbit of the human beings:.." << std::endl;
+	sleep(5);
+	std::cout << "\033[2J\033[H" << std::endl;
+	//sleep(5);
+	std::cout << YELLOW << "Showcasting just:" << std::endl;
+	sleep(5);
+	std::cout << "\033[2J\033[H" << std::endl;
+//	sleep(5);
+	std::cout << RED_BACKGROUND <<  "Too much, and unneccesary violence... " << RESET << std::endl;
+	sleep(5);  
+	std::cout << "\033[2J\033[H" << std::endl;
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanA bob("Bob", club);
 		bob.attack();
-		club.setType("some other type of club");
+		sleep(1);  
+		club.setType("silly, gummy clubs");
 		bob.attack();
+		sleep(1);  
 	}
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
 		jim.setWeapon(club);
 		jim.attack();
-		club.setType("some other type of club");
+		sleep(1);  
+		club.setType("bananas");
 		jim.attack();
 	}
 	return 0;

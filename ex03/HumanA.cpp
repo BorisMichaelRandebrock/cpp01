@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 18:41:35 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/10 19:18:41 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 11:48:19 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <iostream>
 #include "Weapon.hpp"
 #include "HumanA.hpp"
+#include "colors.hpp"
+
 
 /*HumanA::HumanA()
 	: name(""), weapon("") {}
@@ -51,7 +53,7 @@ void HumanA::setWeapon(Weapon& weapon) {
 }
 */
 void HumanA::attack() const {
-	std::cout << name << " attacks with their " << weapon.getType() <<std::endl;
+	std::cout << name << " attacks with their " << BOLD_RED << weapon.getType() << RESET << std::endl;
 }
 
 /*

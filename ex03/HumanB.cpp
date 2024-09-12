@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/12 12:01:32 by brandebr          #+#    #+#             */
+/*   Updated: 2024/09/12 12:01:38 by brandebr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include <string>
 #include <iostream>
 #include "Weapon.hpp"
 #include "HumanB.hpp"
+#include "colors.hpp"
 
 /*HumanB::HumanB()
 	: name("") {}
@@ -39,7 +52,7 @@ void HumanB::setWeapon(Weapon& weapon) {
 
 void HumanB::attack() const {
 	if (weapon) {
-		std::cout << name << " attacks with their " << weapon->getType() <<std::endl;
+		std::cout << name << " attacks with their " << BOLD << RED << weapon->getType() << RESET << std::endl;
 	} else {
 		std::cout << name << " has no weapon!" << std::endl;
 	};
