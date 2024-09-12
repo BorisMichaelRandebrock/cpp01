@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:01:48 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/12 12:01:51 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 13:22:22 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class HumanB {
 	Weapon* weapon;
 
 	public:
-	//HumanB("");
 	HumanB(const std::string& name);
 	HumanB(const HumanB& other);
 	HumanB& operator=(const HumanB& other);

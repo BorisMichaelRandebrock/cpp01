@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:01:32 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/12 12:01:38 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 13:13:17 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,8 @@
 #include "HumanB.hpp"
 #include "colors.hpp"
 
-/*HumanB::HumanB()
-	: name("") {}
-*/
 HumanB::HumanB(const std::string& name)
 	: name(name), weapon(NULL) {
-//	Weapon weapon();		
 }
 
 HumanB::HumanB(const HumanB& other)
@@ -54,7 +50,7 @@ void HumanB::attack() const {
 	if (weapon) {
 		std::cout << name << " attacks with their " << BOLD << RED << weapon->getType() << RESET << std::endl;
 	} else {
-		std::cout << name << " has no weapon!" << std::endl;
+		std::cout << "... " << BLUE << name << " has no weapon!" << RESET << std::endl;
 	};
 }
 

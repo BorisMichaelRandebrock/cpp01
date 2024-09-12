@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:52:52 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/12 12:24:42 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 12:40:45 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ int main(void) {
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
+		jim.attack();
+		sleep(2);
 		jim.setWeapon(club);
 		jim.attack();
 		sleep(1);  

@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 18:41:35 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/12 11:48:19 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 13:07:45 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 #include "colors.hpp"
 
 
-/*HumanA::HumanA()
-	: name(""), weapon("") {}
-*/
 HumanA::HumanA(const std::string& name, Weapon& weapon)
 	: name(name), weapon(weapon) {}
 
@@ -29,7 +26,6 @@ HumanA::HumanA(const HumanA& other)
 HumanA& HumanA::operator=(const HumanA& other) { // Assignment operator
     if (this != &other) { // Self-assignment check
         name = other.name;
-        // weapon is a reference; no need to assign it again
     }
     return *this;
 }
@@ -39,32 +35,11 @@ HumanA::~HumanA() {}
 const  std::string& HumanA::getName() const {
 	return name;
 }
-/*
-Weapon HumanA::getWeapon() const {
-	return weapon;
-}
-*/
+
 void HumanA::setName(const std::string& name) {
 	this->name = name;
 }
-/*
-void HumanA::setWeapon(Weapon& weapon) {
-	this->weapon = weapon;
-}
-*/
 void HumanA::attack() const {
 	std::cout << name << " attacks with their " << BOLD_RED << weapon.getType() << RESET << std::endl;
 }
 
-/*
-const std::string& HumanA::getName() const {
-    return name;
-}
-
-void HumanA::setName(const std::string& name) {
-    this->name = name;
-}
-
-void HumanA::attack() const {
-    std::cout << name << " attacks with their " << weapon.getType() << std::endl;
-}*/

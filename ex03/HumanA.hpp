@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 18:40:58 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/10 19:12:07 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/12 13:08:47 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class HumanA {
 		Weapon& weapon;
 
 	public:
-//		HumanA("");
 		HumanA(const std::string& name, Weapon& weapon);
 		HumanA(const HumanA& other); // copy constructor
 		HumanA& operator=(const HumanA& other); //assignement operator
