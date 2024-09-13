@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 18:24:00 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/13 11:48:31 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/13 17:14:43 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,30 +50,12 @@ int main(int argc, char **argv) {
 			case DEBUG:
 				sleep(1);
 				harl.complain("DEBUG");
-				sleep(3);
-				harl.complain("INFO");
-				sleep(3);
-				harl.complain("WARNING");
-				sleep(3);
-				harl.complain("ERROR");
-				sleep(2);
-				break;
 			case INFO:
 				sleep(3);
 				harl.complain("INFO");
-				sleep(3);
-				harl.complain("WARNING");
-				sleep(3);
-				harl.complain("ERROR");
-				sleep(2);
-				break;
 			case WARNING:
 				sleep(3);
 				harl.complain("WARNING");
-				sleep(3);
-				harl.complain("ERROR");
-				sleep(2);
-				break;
 			case ERROR:
 				sleep(3);
 				harl.complain("ERROR");
